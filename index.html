@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXEDEA COSMETICS</title>
+    <link rel="stylesheet" href="style.css/main.css">
+    <style>
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .modal-content img {
+            width: 100%;
+        }
+
+        .modal-content button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/Luxedea Cosmetics & Beauty Logo.png" alt="LuxeDea Cosmetics Logo" class="logo-img">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <button id="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Welcome to Our Store</h2>
+            <p>Explore our exclusive collection of top-rated products!</p>  
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>Our Featured Products</h2>
+        <div class="product-list">
+            
+            <div class="product" data-id="1">
+                <img src="images/liquid foundation.jpg" width="150" alt="LuxeDea Liquid Foundation">
+                <h3>LuxeDea Liquid Foundation</h3>
+                <p>Buildable coverage for a flawless, natural finish. Lightweight and hydrating.</p>
+                <p class="price">₱299.99</p>
+                <button class="cta-button add-to-cart" data-id="1" data-name="LuxeDea Liquid Foundation" data-price="299.99">Add to Cart</button>
+                <button class="cta-button buy-now" data-id="1" data-name="LuxeDea Liquid Foundation" data-price="299.99" data-img="images/liquid foundation.jpg">Buy Now</button>
+            </div>
+
+            
+            <div class="product" data-id="2">
+                <img src="images/liquid mascara.jpg" width="150" alt="LuxeDea Liquid Mascara">
+                <h3>LuxeDea Liquid Mascara</h3>
+                <p>Clump-free, long-lasting formula for bold volume and definition.</p>
+                <p class="price">₱109.99</p>
+                <button class="cta-button add-to-cart" data-id="2" data-name="LuxeDea Liquid Mascara" data-price="109.99">Add to Cart</button>
+                <button class="cta-button buy-now" data-id="2" data-name="LuxeDea Liquid Mascara" data-price="109.99" data-img="images/liquid mascara.jpg">Buy Now</button>
+            </div>
+
+            
+            <div class="product" data-id="3">
+                <img src="images/matte lipstick.jpg" width="150" alt="LuxeDea Matte Lippie">
+                <h3>LuxeDea Matte Lippie</h3>
+                <p>Rich pigment with a smooth matte finish for a perfect pout.</p>
+                <p class="price">₱259.99</p>
+                <button class="cta-button add-to-cart" data-id="3" data-name="LuxeDea Matte Lippie" data-price="259.99">Add to Cart</button>
+                <button class="cta-button buy-now" data-id="3" data-name="LuxeDea Matte Lippie" data-price="259.99" data-img="images/matte lipstick.jpg">Buy Now</button>
+            </div>
+
+            
+            <div class="product" data-id="4">
+                <img src="images/liquid eyeliner.jpg" width="150" alt="LuxeDea Liquid Eyeliner">
+                <h3>LuxeDea Liquid Eyeliner</h3>
+                <p>Precise lines with a smooth, fast-drying formula. Long-lasting and smudge-proof.</p>
+                <p class="price">₱199.99</p>
+                <button class="cta-button add-to-cart" data-id="4" data-name="LuxeDea Liquid Eyeliner" data-price="199.99">Add to Cart</button>
+                <button class="cta-button buy-now" data-id="4" data-name="LuxeDea Liquid Eyeliner" data-price="199.99" data-img="images/liquid eyeliner.jpg">Buy Now</button>
+            </div>
+
+            
+            <div class="product" data-id="5">
+                <img src="images/highlighter.jpg" width="150" alt="LuxeDea Highlighter">
+                <h3>LuxeDea Highlighter</h3>
+                <p>Radiant, luminous glow for a dewy, fresh finish.</p>
+                <p class="price">₱179.99</p>
+                <button class="cta-button add-to-cart" data-id="5" data-name="LuxeDea Highlighter" data-price="179.99">Add to Cart</button>
+                <button class="cta-button buy-now" data-id="5" data-name="LuxeDea Highlighter" data-price="179.99" data-img="images/highlighter.jpg">Buy Now</button>
+            </div>
+
+            
+            <div class="product" data-id="6">
+                <img src="images/eyeshadow pallete.jpg" width="150" alt="LuxeDea Eyeshadow Palette">
+                <h3>LuxeDea Eyeshadow Palette</h3>
+                <p>Highly-pigmented shades for a smooth, lasting eye look.</p>
+                <p class="price">₱599.99</p>
+                <button class="cta-button add-to-cart" data-id="6" data-name="LuxeDea Eyeshadow Palette" data-price="599.99">Add to Cart</button>
+                <button class="cta-button buy-now" data-id="6" data-name="LuxeDea Eyeshadow Palette" data-price="599.99" data-img="images/eyeshadow pallete.jpg">Buy Now</button>
+            </div>
+
+            
+            <div class="product" data-id="7">
+                <img src="images/eyebrow pencilgel.jpg" width="150" alt="LuxeDea Eyebrow Pencil/Gel">
+                <h3>LuxeDea Eyebrow Pencil/Gel</h3>
+                <p>Perfectly shaped brows with a dual-action pencil and gel formula.</p>
+                <p class="price">₱249.99</p>
+                <button class="cta-button add-to-cart" data-id="7" data-name="LuxeDea Eyebrow Pencil/Gel" data-price="249.99">Add to Cart</button>
+                <button class="cta-button buy-now" data-id="7" data-name="LuxeDea Eyebrow Pencil/Gel" data-price="249.99" data-img="images/eyebrow pencilgel.jpg">Buy Now</button>
+            </div>
+
+            
+            <div class="product" data-id="8">
+                <img src="images/setting spray.jpg" width="150" alt="LuxeDea Setting Spray">
+                <h3>LuxeDea Setting Spray</h3>
+                <p>Long-lasting makeup with a lightweight, refreshing formula.</p>
+                <p class="price">₱399.99</p>
+                <button class="cta-button add-to-cart" data-id="8" data-name="LuxeDea Setting Spray" data-price="399.99">Add to Cart</button>
+                <button class="cta-button buy-now" data-id="8" data-name="LuxeDea Setting Spray" data-price="399.99" data-img="images/setting spray.jpg">Buy Now</button>
+            </div>
+
+            
+            <div class="product" data-id="9">
+                <img src="images/setting powder.jpg" width="150" alt="LuxeDea Setting Powder">
+                <h3>LuxeDea Setting Powder</h3>
+                <p>Flawlessly sets makeup for all-day wear with a soft, matte finish.</p>
+                <p class="price">₱299.99</p>
+                <button class="cta-button add-to-cart" data-id="9" data-name="LuxeDea Setting Powder" data-price="299.99">Add to Cart</button>
+                <button class="cta-button buy-now" data-id="9" data-name="LuxeDea Setting Powder" data-price="299.99" data-img="images/setting powder.jpg">Buy Now</button>
+            </div>
+
+            
+            <div class="product" data-id="10">
+                <img src="images/concealer.jpg" width="150" alt="LuxeDea Concealer">
+                <h3>LuxeDea Facial Cleanser</h3>
+                <p>Gentle and effective cleanser to remove makeup and impurities.</p>
+                <p class="price">₱149.99</p>
+                <button class="cta-button add-to-cart" data-id="10" data-name="LuxeDea Facial Cleanser" data-price="149.99">Add to Cart</button>
+                <button class="cta-button buy-now" data-id="10" data-name="LuxeDea Facial Cleanser" data-price="149.99" data-img="images/facial cleanser.jpg">Buy Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are committed to providing premium quality products that meet your needs and exceed your expectations. Our products are designed with you in mind.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need more information, please reach out to us!</p>
+        <p>Phone: +1234567890<p>
+        <p>Email: <a href="luxedeacosmetics@gmail.com">luxedeacosmetics@gmail.com<p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LuxeDea Cosmetics. All rights reserved.</p>
+    </footer>
+
+    
+    <div class="modal" id="buyModal">
+        <div class="modal-content">
+            <img id="product-image" src="" alt="">
+            <h3 id="product-name"></h3>
+            <p id="product-price"></p>
+            <button id="add-to-cart-modal">Add to Cart</button>
+            <button id="checkout-modal">Checkout</button>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
+    <script>
+        
+        let cart = [];
+
+        
+        function updateCartCount() {
+            const cartCountElement = document.getElementById("cart-count");
+            cartCountElement.textContent = cart.length;
+        }
+
+        
+        function addToCart(product) {
+            cart.push(product);
+            updateCartCount();
+            alert(`${product.name} has been added to your cart!`);
+        }
+
+        
+        document.querySelectorAll(".add-to-cart").forEach(button => {
+            button.addEventListener("click", function(event) {
+                const product = {
+                    id: this.dataset.id,
+                    name: this.dataset.name,
+                    price: parseFloat(this.dataset.price)
+                };
+                addToCart(product);
+            });
+        });
+
+        
+        document.querySelectorAll(".buy-now").forEach(button => {
+            button.addEventListener("click", function(event) {
+                const productName = this.dataset.name;
+                const productPrice = this.dataset.price;
+                const productImage = this.dataset.img;
+
+                
+                document.getElementById("product-name").textContent = productName;
+                document.getElementById("product-price").textContent = `₱${productPrice}`;
+                document.getElementById("product-image").src = productImage;
+
+                document.getElementById("buyModal").style.display = "flex";
+            });
+        });
+
+        
+        document.getElementById("close-modal").addEventListener("click", function() {
+            document.getElementById("buyModal").style.display = "none";
+        });
+
+        
+        document.getElementById("checkout-modal").addEventListener("click", function() {
+            alert("Redirecting to checkout...");
+            
+            window.location.href = "#contact"; 
+        });
+
+        
+        document.getElementById("add-to-cart-modal").addEventListener("click", function() {
+            const product = {
+                name: document.getElementById("product-name").textContent,
+                price: parseFloat(document.getElementById("product-price").textContent.replace('₱', ''))
+            };
+            addToCart(product);
+            document.getElementById("buyModal").style.display = "none"; 
+        });
+
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
